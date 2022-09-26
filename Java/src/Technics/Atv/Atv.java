@@ -9,9 +9,9 @@ public class Atv extends Technics implements TechnicsString {
      * rearTrunk - Наличие переднего багажника.
      * frontTrunk - Наличие заднего багажника.
      */
-    protected String driveType;
-    protected boolean rearTrunk;
-    protected boolean frontTrunk;
+    private final String driveType;
+    private final boolean rearTrunk;
+    private final boolean frontTrunk;
 
     public Atv(
             String technicMark, String technicModel, int technicSerialNumber,
@@ -32,16 +32,16 @@ public class Atv extends Technics implements TechnicsString {
 
     @Override
     public String toString() {
-        String strOut = String.format("Квадроцикл марки %s модель %s ", super.technicMark, super.technicModel);
-        if (rearTrunk && frontTrunk) {
-            return strOut + "имеющий заднее и переднее багажные отделения.";
+        String strOut = String.format("Квадроцикл марки %s модель %s", super.technicMark, super.technicModel);
+        if (this.rearTrunk && this.frontTrunk) {
+            return strOut + " имеющий заднее и переднее багажные отделения.";
         }
-        if (rearTrunk) {
-            return strOut + "имеющий заднее багажное отделения.";
+        if (this.rearTrunk) {
+            return strOut + " имеющий заднее багажное отделения.";
         }
-        if (frontTrunk) {
-            return strOut + "имеющий переднее багажное отделения.";
+        if (this.frontTrunk) {
+            return strOut + " имеющий переднее багажное отделения.";
         }
-        return strOut;
+        return strOut + ".";
     }
 }

@@ -7,8 +7,8 @@ public class Avto extends Technics implements Interfaces.TechnicsString{
      * chassisType - тип шасси.
      * bodyType - тип кузова.
      */
-    protected String chassisType;
-    protected String bodyType;
+    private final String chassisType;
+    private final String bodyType;
 
     public Avto(String technicMark, String technicModel, int technicSerialNumber,
                 int passengersNum,
@@ -28,6 +28,6 @@ public class Avto extends Technics implements Interfaces.TechnicsString{
     @Override
     public String toString() {
         String strOut = String.format("Автомобиль марки %s модель %s ", super.technicMark, super.technicModel);
-        return strOut + String.format("%s %s.", chassisType, bodyType);
+        return strOut + String.format("%s %s.", this.chassisType, this.bodyType);
     }
 }

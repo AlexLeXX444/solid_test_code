@@ -9,9 +9,9 @@ public class Jetski extends Technics implements TechnicsString {
      * displacement - Водоизмещение.
      * seatAvailability - Наличие сиденья.
      */
-    protected String housingMaterial;
-    protected int displacement;
-    protected boolean seatAvailability;
+    private final String housingMaterial;
+    private final int displacement;
+    private final boolean seatAvailability;
 
     public Jetski(String technicMark, String technicModel, int technicSerialNumber,
                   int passengersNum,

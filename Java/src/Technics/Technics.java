@@ -16,20 +16,20 @@ public abstract class Technics implements TechnicsOut {
      * massMaximum - максимальная масса со всеми пассажирами и грузом.
      * massLoadCapacity - максимальная грузоподъемность помимо пассажиров.
      */
-    protected String kindOfTechnic;
-    protected String technicMark;
-    protected String technicModel;
-    protected int technicSerialNumber;
+    protected final String  kindOfTechnic;
+    protected final String technicMark;
+    protected final String technicModel;
+    protected final int technicSerialNumber;
 
-    protected int passengersNum;
+    protected final int passengersNum;
 
-    protected String powerPlant;
-    protected int powerPlantSerialNumber;
-    protected int powerPlantRangeReserve;
+    protected final String powerPlant;
+    protected final int powerPlantSerialNumber;
+    protected final int powerPlantRangeReserve;
 
-    protected double massMinimum;
-    protected double massMaximum;
-    protected double massLoadCapacity;
+    protected final double massMinimum;
+    protected final double massMaximum;
+    protected final double massLoadCapacity;
 
     public Technics(String kindOfTechnic, String technicMark, String technicModel, int technicSerialNumber,
                     int passengersNum,
