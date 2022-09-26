@@ -1,6 +1,8 @@
 package Technics;
 
-public abstract class Technics {
+import Interfaces.TechnicsOut;
+
+public abstract class Technics implements TechnicsOut {
     /**+
      * kindOfTechnic - разновидность техники.
      * technicMark - Марка агрегата.
@@ -44,5 +46,20 @@ public abstract class Technics {
         this.massMinimum = massMinimum;
         this.massMaximum = massMaximum;
         this.massLoadCapacity = massLoadCapacity;
+    }
+
+    @Override
+    public String getInfoTechnics() {
+        return String.format("Основная информация : %s ::: %s ::: %d", this.technicMark, this.technicModel, this.technicSerialNumber);
+    }
+
+    @Override
+    public String getInfoPowerPlant() {
+        return String.format("Силовая установка : %s ::: %s ::: %d", this.powerPlant, this.powerPlantSerialNumber, this.powerPlantRangeReserve);
+    }
+
+    @Override
+    public String getInfoMass() {
+        return String.format("Масса и нагрузка : %s ::: %s ::: %s", this.massMinimum, this.massMaximum, this.massLoadCapacity);
     }
 }

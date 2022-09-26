@@ -2,7 +2,7 @@ package Technics.Atv;
 
 import Technics.Technics;
 
-public class Atv extends Technics implements Interfaces.TechnicsOut {
+public class Atv extends Technics implements Interfaces.TechnicsString {
     /**
      * driveType - Тип привода.
      * rearTrunk - Наличие переднего багажника.
@@ -27,21 +27,6 @@ public class Atv extends Technics implements Interfaces.TechnicsOut {
         this.driveType = driveType;
         this.rearTrunk = rearTrunk;
         this.frontTrunk = frontTrunk;
-    }
-
-    @Override
-    public String getInfoTechnics() {
-        return String.format("Основная информация : %s ::: %s ::: %d", super.technicMark, super.technicModel, super.technicSerialNumber);
-    }
-
-    @Override
-    public String getInfoPowerPlant() {
-        return String.format("Силовая установка : %s ::: %s ::: %d", super.powerPlant, super.powerPlantSerialNumber, super.powerPlantRangeReserve);
-    }
-
-    @Override
-    public String getInfoMass() {
-        return String.format("Масса и нагрузка : %s ::: %s ::: %s", super.massMinimum, super.massMaximum, super.massLoadCapacity);
     }
 
     @Override
