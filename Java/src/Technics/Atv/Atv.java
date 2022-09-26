@@ -1,8 +1,9 @@
 package Technics.Atv;
 
+import Interfaces.TechnicsString;
 import Technics.Technics;
 
-public class Atv extends Technics implements Interfaces.TechnicsString {
+public class Atv extends Technics implements TechnicsString {
     /**
      * driveType - Тип привода.
      * rearTrunk - Наличие переднего багажника.
